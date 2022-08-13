@@ -21,6 +21,7 @@ for i in range(10):
         products.append(product)
     
     time.sleep(10)
+    print("Crawling page", i + 1)
 
 with open('products.json', 'w') as outfile:
     json.dump(products, outfile)
