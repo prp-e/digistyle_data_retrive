@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+import json
 import requests
 import time
 
@@ -21,4 +22,5 @@ for i in range(10):
     
     time.sleep(10)
 
-print(products)
+with open('products.json', 'w') as outfile:
+    json.dump(products, outfile)
